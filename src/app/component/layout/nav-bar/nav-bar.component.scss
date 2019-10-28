@@ -1,0 +1,52 @@
+@import '../../../styles/color.scss';
+
+.NavBar {
+    padding: 25px 0 0 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+    &__Img {
+        cursor: pointer;
+        // margin-right: 50px;
+        width: 75px;
+        height: 75px;
+    }
+    &__Focus {
+        & > button {
+            color: $orange;
+        }
+    }
+    &__Btn {
+        width: 150px;
+        // border: 1px black solid;
+        margin: 0 5px;
+        height: 100%;
+        border-right: 1px solid black;
+        &:last-child {
+            border-right: none;
+        }
+        & > button {
+            cursor: pointer;
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            background-color: white;
+            text-transform: uppercase;
+            opacity: 0.8;
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            outline: none;
+            border: none;
+            &:hover {
+                // background-color: rgba(rgb(46, 42, 42), 0.9);
+                color: $orange;
+                opacity: 1;
+                transition: 0.5s;
+            }
+        }
+    }
+}

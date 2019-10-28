@@ -1,1 +1,10 @@
-<p>member works!</p>
+<div class="Member" *ngIf='this.$member.members$ | async as members'>
+    <div class="Member__Card" *ngFor='let member of members'>
+        <ul>
+            <li class="Member__Name">{{member.name}}</li>
+            <li class="Member__Phone">{{member.phone}}</li>
+            <li class="Member__Email">{{member.email}}</li>
+        </ul>
+        
+    </div>
+</div>

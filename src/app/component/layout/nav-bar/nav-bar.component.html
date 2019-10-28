@@ -1,1 +1,9 @@
-<p>nav-bar works! test</p>
+<div class='NavBar'>
+    <img (click)="this.$router.redirect('home')" class="NavBar__Img" src="../../../../assets/image/studio.png" alt="">
+    <ng-container *ngIf='this.$router.currentPage$ | async as current'>
+        <ng-container *ngFor='let page of this.$router.pages'>
+            <div [ngClass]="{'NavBar__Focus' : current === page , 'NavBar__Btn': true}">
+                <button (click)=this.$router.redirect(page)>{{page}}</button></div>
+        </ng-container>
+    </ng-container>
+</div>

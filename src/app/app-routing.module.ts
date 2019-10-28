@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'member', component: MemberComponent },
   { path: 'todo', component: TodoComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

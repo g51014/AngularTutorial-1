@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MemberService } from 'src/app/service/member/member.service';
 
 @Component({
   selector: 'app-member',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private $member: MemberService
+  ) { }
 
   ngOnInit() {
+    this.$member.members$.subscribe(
+      _ => console.log(_)
+    )
   }
 
 }
