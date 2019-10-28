@@ -13,9 +13,6 @@ export class MemberComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.$member.members$.subscribe(
-      _ => console.log(_)
-    )
   }
 
 }
