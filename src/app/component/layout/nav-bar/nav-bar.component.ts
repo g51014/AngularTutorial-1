@@ -9,10 +9,11 @@ import { RouteService } from 'src/app/service/route/route.service';
 export class NavBarComponent implements OnInit {
 
   constructor(
-    private $router: RouteService
+    public $router: RouteService
   ) { }
 
   ngOnInit() {
+    this.$router.redirect(window.location.pathname.replace('/', ''));
   }
 
 }

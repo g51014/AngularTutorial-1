@@ -9,7 +9,7 @@ import { MemberService } from 'src/app/service/member/member.service';
 export class MemberComponent implements OnInit {
 
   constructor(
-    private $member: MemberService
+    public $member: MemberService
   ) { }
 
   ngOnInit() {
