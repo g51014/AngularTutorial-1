@@ -1,5 +1,12 @@
 # AngularWeek1
 
+1. how to use angular router and create nav bar components
+2. how to write service and use rxjs handle event and how to use httpClient get API
+3. complete member component
+4. complete todo
+5. 
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
 ## Development server
