@@ -17,7 +17,7 @@
     }
     &__Focus {
         & > button {
-            color: $orange;
+            color: $orange-1;
         }
     }
     &__Btn {
@@ -43,7 +43,7 @@
             border: none;
             &:hover {
                 // background-color: rgba(rgb(46, 42, 42), 0.9);
-                color: $orange;
+                color: $orange-1;
                 opacity: 1;
                 transition: 0.5s;
             }

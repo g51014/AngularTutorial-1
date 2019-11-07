@@ -7,14 +7,14 @@
     flex-wrap: wrap;
     &__Card {
         &:hover {
-            background-color: $orange;
+            background-color: $orange-1;
             color: $white;
             transition: 0.5s;
             border-color: $white;
             transform: scale(1.08);
         }
         cursor: pointer;
-        border: 1px solid black;
+        border: 1px solid $black;
         margin: 30px;
         width: 20%;
         height: 150px;

@@ -7,6 +7,7 @@ import { MemberComponent } from './page/member/member.component';
 import { TodoComponent } from './page/todo/todo.component';
 import { HomeComponent } from './page/home/home.component';
 import { NavBarComponent } from './component/layout/nav-bar/nav-bar.component';
+import { TodoCardComponent } from './component/todo-card/todo-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavBarComponent } from './component/layout/nav-bar/nav-bar.component';
     MemberComponent,
     TodoComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    TodoCardComponent
   ],
   imports: [
     BrowserModule,

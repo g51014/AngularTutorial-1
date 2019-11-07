@@ -1,0 +1,13 @@
+@import '../../styles/color.scss';
+$card-padding: 25px;
+
+.TodoCard {
+  min-width: 150px;
+  min-height: 150px;
+  padding: $card-padding;
+  display: inline-flex;
+  border: $black 1px solid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

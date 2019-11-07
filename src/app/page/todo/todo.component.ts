@@ -9,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class TodoComponent implements OnInit {
 
   constructor(
-    public $todo: TodoService
+    private $todo: TodoService
   ) { }
+
+    public todo$ = this.$todo.todo$;
 
   ngOnInit() {
   }
