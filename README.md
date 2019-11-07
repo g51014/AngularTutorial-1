@@ -2,8 +2,8 @@
 
 1. how to use angular router and create nav bar components
 2. how to write service and use rxjs handle event and how to use httpClient get API
-3. complete member component
-4. complete todo
+3. complete member page
+4. create todo-card component and complete todo page
 5. 
 
 
