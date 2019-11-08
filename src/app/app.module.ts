@@ -8,6 +8,7 @@ import { TodoComponent } from './page/todo/todo.component';
 import { HomeComponent } from './page/home/home.component';
 import { NavBarComponent } from './component/layout/nav-bar/nav-bar.component';
 import { TodoCardComponent } from './component/todo-card/todo-card.component';
+import { TodoCreateCardComponent } from './component/todo-create-card/todo-create-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TodoCardComponent } from './component/todo-card/todo-card.component';
     TodoComponent,
     HomeComponent,
     NavBarComponent,
-    TodoCardComponent
+    TodoCardComponent,
+    TodoCreateCardComponent,
   ],
   imports: [
     BrowserModule,

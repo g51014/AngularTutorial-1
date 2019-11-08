@@ -1,0 +1,7 @@
+<div class='TodoCreateCard'>
+  <input placeholder="TITLE" (change)='this.setTodo("title",$event.target.value)'>
+  <input placeholder="CONTENT" (change)='this.setTodo("content",$event.target.value)'>
+  <div class="TodoCreateCard__Button">
+    <span (click)=this.createTodo() class="fa fa-plus-circle"></span>
+  </div>
+</div>

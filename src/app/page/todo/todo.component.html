@@ -1,7 +1,8 @@
 <div class='Todo'>
   <ng-container *ngIf='todo$ | async as todos'>
-    <div *ngFor = 'let todo of todos'>
+    <ng-container *ngFor = 'let todo of todos'>
       <app-todo-card [(todo)] = todo></app-todo-card>
-    </div>
+    </ng-container>
+    <app-todo-create-card></app-todo-create-card>
   </ng-container>
 </div>

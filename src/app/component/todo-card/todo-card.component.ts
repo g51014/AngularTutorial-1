@@ -9,22 +9,28 @@ import { Todo } from 'src/app/interface/todo.class';
 })
 export class TodoCardComponent implements OnInit {
 
-  @Input() public todo;
+  @Input() public todo?: Todo;
 
   constructor(
     public $todo: TodoService
   ) { }
 
+  public test: Todo = {
+    id: 1,
+    title: 'test',
+    content: 'test',
+    status: 'done'
+  };
+
   ngOnInit() {
-    console.log(this.todo)
-    this.$todo.updateTodoStatus$.subscribe()
+    console.log(this.todo);
   }
 
-  public addTodo(todo:Todo) {
-    this.$todo.todo.next(todo)
-  }
+  // public addTodo(todo: Todo) {
+  //   this.$todo.todo.next(todo);
+  // }
 
-  public updateTodo(todo:Todo) {
+  public updateTodo(todo: Todo) {
 
   }
 

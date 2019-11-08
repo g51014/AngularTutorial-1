@@ -15,6 +15,7 @@ export class TodoComponent implements OnInit {
     public todo$ = this.$todo.todo$;
 
   ngOnInit() {
+    this.$todo.updateTodo$.subscribe();
   }
 
 }
