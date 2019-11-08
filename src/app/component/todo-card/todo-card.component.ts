@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TodoService } from 'src/app/service/todo/todo.service';
+import { Todo } from 'src/app/interface/todo.class';
 
 @Component({
   selector: 'app-todo-card',
@@ -9,10 +11,21 @@ export class TodoCardComponent implements OnInit {
 
   @Input() public todo;
 
-  constructor() { }
+  constructor(
+    public $todo: TodoService
+  ) { }
 
   ngOnInit() {
     console.log(this.todo)
+    this.$todo.updateTodoStatus$.subscribe()
+  }
+
+  public addTodo(todo:Todo) {
+    this.$todo.todo.next(todo)
+  }
+
+  public updateTodo(todo:Todo) {
+
   }
 
 }

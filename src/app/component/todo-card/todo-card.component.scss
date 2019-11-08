@@ -8,6 +8,28 @@ $card-padding: 25px;
   display: inline-flex;
   border: $black 1px solid;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  & > h1 {
+    margin: 0;
+  }
+  & > p {
+    margin: 0;
+  }
+  &__Button {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    & > span {
+      width: 20px;
+      height: 20px;
+      background-color: $red-1;
+      border-radius: 100%;
+      margin-right: 10px;
+      cursor: pointer;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
 }

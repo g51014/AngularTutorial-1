@@ -1,4 +1,9 @@
 <div class= 'TodoCard'>
-  <p>{{todo.title}}</p>
+  <h1>{{todo.title}}</h1>
   <p>{{todo.content}}</p>
+  <div class="TodoCard__Button">
+    <span (click) = '$todo.todo.next([todo])'></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>

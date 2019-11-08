@@ -3,7 +3,8 @@
     <ng-container *ngIf='this.$router.currentPage$ | async as current'>
         <ng-container *ngFor='let page of this.$router.pages'>
             <div [ngClass]="{'NavBar__Focus' : current === page , 'NavBar__Btn': true}">
-                <button (click)=this.$router.redirect(page)>{{page}}</button></div>
+                <button (click)=this.$router.redirect(page)>{{page}}</button>
+            </div>
         </ng-container>
     </ng-container>
 </div>
