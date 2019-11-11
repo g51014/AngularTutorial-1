@@ -9,6 +9,7 @@ import { HomeComponent } from './page/home/home.component';
 import { NavBarComponent } from './component/layout/nav-bar/nav-bar.component';
 import { TodoCardComponent } from './component/todo-card/todo-card.component';
 import { TodoCreateCardComponent } from './component/todo-create-card/todo-create-card.component';
+import { CloseBottonComponent } from './component/common/close-botton/close-botton.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TodoCreateCardComponent } from './component/todo-create-card/todo-creat
     NavBarComponent,
     TodoCardComponent,
     TodoCreateCardComponent,
+    CloseBottonComponent,
   ],
   imports: [
     BrowserModule,

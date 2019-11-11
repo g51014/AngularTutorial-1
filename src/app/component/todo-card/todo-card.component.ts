@@ -23,15 +23,7 @@ export class TodoCardComponent implements OnInit {
   };
 
   ngOnInit() {
-    console.log(this.todo);
   }
 
-  // public addTodo(todo: Todo) {
-  //   this.$todo.todo.next(todo);
-  // }
-
-  public updateTodo(todo: Todo) {
-
-  }
 
 }

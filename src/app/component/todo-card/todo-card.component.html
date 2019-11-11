@@ -1,8 +1,9 @@
-<div class= 'TodoCard'>
+<div class='TodoCard'>
   <h1>{{todo.title}}</h1>
   <p>{{todo.content}}</p>
+  <span (click)= 'this.$todo.removeTodo.next(this.todo.id)' class='TodoCard__Close fa fa-times'></span>
   <div class="TodoCard__Button">
-    <span (click) = '$todo.updateTodo.next(test)'></span>
+    <span (click)='$todo.updateTodo.next(test)'></span>
     <span></span>
     <span></span>
   </div>

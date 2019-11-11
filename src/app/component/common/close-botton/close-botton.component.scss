@@ -1,0 +1,11 @@
+@import "../../../styles/color.scss";
+.CloseBotton {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-weight: 500;
+  &:hover {
+    color: $orange-1;
+  }
+}

@@ -1,6 +1,6 @@
 import { Todo } from 'src/app/interface/todo.class';
 import { TodoService } from './../../service/todo/todo.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TODO_DEFAULT } from 'src/app/utility/default';
 
 @Component({
@@ -10,24 +10,24 @@ import { TODO_DEFAULT } from 'src/app/utility/default';
 })
 export class TodoCreateCardComponent implements OnInit {
 
+  @Input() public todos: Todo[];
+
   constructor(
     public $todo: TodoService
   ) { }
   public todo: Todo = TODO_DEFAULT;
-  public todos: Todo[];
-
+  private lastestID: number;
   public setTodo(prop: string, value: string) {
     this.todo = { ...this.todo, ...{ [prop]: value } };
   }
 
   public createTodo() {
-    this.todo = { ...this.todo, ...{ id: this.todos.length } };
+    this.todo = { ...this.todo, ...{ id: this.lastestID } };
+    this.lastestID = this.lastestID + 1;
     this.$todo.updateTodo.next(this.todo);
   }
   ngOnInit() {
-    this.$todo.todo$.subscribe(
-      (todos: Todo[]) => this.todos = todos
-    );
+    this.lastestID = this.todos.length;
   }
 
 }
