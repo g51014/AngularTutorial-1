@@ -11,6 +11,9 @@ export class TodoService {
 
   constructor() { }
 
+  public nextId = new ReplaySubject<number>();
+  public nextId$ = this.nextId.asObservable().pipe(startWith(0));
+
   public removeTodo = new Subject<number>();
   public removeTodo$ = this.removeTodo.asObservable().pipe(startWith(null));
 
@@ -24,10 +27,14 @@ export class TodoService {
     startWith([]),
     // tslint:disable-next-line: deprecation
     combineLatest(this.removeTodo$, this.updateTodo$, (todos: Todo[], removeID: number, update: Todo) => {
-      this.lastUpdate !== update ? todos = this.updateTodos(update, todos) : todos = this.removedTodos(removeID, todos);
-      this.lastUpdate = update;
+      // console.log(removeID, update);
+      if (removeID !== null || update !== null) {
+        this.lastUpdate !== update ? todos = this.updateTodos(update, todos) : todos = this.removedTodos(removeID, todos);
+        this.lastUpdate = update;
+      }
       return todos;
-    })
+    }),
+    tap(_ => console.log(_))
   );
 
   private removedTodos(removeID: number, todos: Todo[]): Todo[] {
@@ -49,7 +56,7 @@ export class TodoService {
   private modifyTodos(todos: Todo[], update: Todo): Todo[] {
     todos.map(
       (todo: Todo, index: number) => todo.id === update.id ? todos[index] = update : null
-    )
+    );
     return todos;
   }
 

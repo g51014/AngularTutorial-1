@@ -11,6 +11,12 @@ $card-padding: 25px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  opacity: 0.5;
+  &:hover {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: 0.5s;
+  }
   & > h1 {
     margin: 0;
   }
@@ -28,6 +34,7 @@ $card-padding: 25px;
       font-size: 40px;
       cursor: pointer;
       &:hover {
+        transition: 0.3s;
         color: $orange-1;
       }
       &:last-child {

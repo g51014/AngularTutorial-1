@@ -1,8 +1,15 @@
 <div class='Todo'>
   <ng-container *ngIf='todo$ | async as todos'>
-    <ng-container *ngFor = 'let todo of todos'>
-      <app-todo-card [(todo)] = todo></app-todo-card>
-    </ng-container>
-    <app-todo-create-card [(todos)] = todos></app-todo-create-card>
+    <div class='Todo__Filter'>
+      <button [ngStyle]="{'background-color': '#ff1744'}"></button>
+      <button [ngStyle]="{'background-color': '#ffe205'}"></button>
+      <button [ngStyle]="{'background-color': '#28a745'}"></button>
+    </div>
+    <div class='Todo__Card'>
+      <ng-container *ngFor='let todo of todos'>
+        <app-todo-card [(todo)]=todo></app-todo-card>
+      </ng-container>
+      <app-todo-create-card></app-todo-create-card>
+    </div>
   </ng-container>
 </div>

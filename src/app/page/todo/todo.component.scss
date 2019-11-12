@@ -1,3 +1,34 @@
+@import '../../styles/color.scss';
+
 .Todo {
     display: flex;
+    flex-direction: column;
+    &__Filter {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 75px;
+      & > button {
+        cursor: pointer;
+        border-radius: 20px;
+        outline: none;
+        border: 1px $gray-1 solid;
+        width: 80px;
+        height: 20px;
+        opacity: 0.5;
+        margin-left: 30px;
+        &:first-child {
+          margin: 0px;
+        }
+        &:hover {
+          opacity: 1;
+          transition: 0.5s;
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+        }
+
+      }
+    }
+    &__Card {
+      flex-wrap: wrap;
+      display: flex;
+    }
 }

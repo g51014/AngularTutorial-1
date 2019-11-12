@@ -1,3 +1,4 @@
+import { TODO_STATUS } from './../../utility/constants';
 import { Component, OnInit, Input } from '@angular/core';
 import { TodoService } from 'src/app/service/todo/todo.service';
 import { Todo } from 'src/app/interface/todo.class';
@@ -15,12 +16,12 @@ export class TodoCardComponent implements OnInit {
     public $todo: TodoService
   ) { }
 
-  public test: Todo = {
-    id: 1,
-    title: 'test',
-    content: 'test',
-    status: 'done'
-  };
+  public TODO_STATUS = Object.keys(TODO_STATUS);
+  public updateStatus( status: 'done' | 'todo' | 'inprogress') {
+    this.todo.status = status;
+    console.log(this.todo);
+    // this.$todo.updateTodo.next(this.todo);
+  }
 
   ngOnInit() {
   }

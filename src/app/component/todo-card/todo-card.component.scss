@@ -4,7 +4,8 @@ $card-padding: 25px;
 .TodoCard {
   position: relative;
   margin-right: 25px;
-  min-width: 150px;
+  margin-bottom: 25px;
+  min-width: 173px;
   min-height: 150px;
   padding: $card-padding;
   display: inline-flex;
@@ -12,6 +13,12 @@ $card-padding: 25px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  opacity: 0.5;
+  &:hover {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: 0.5s;
+  }
   & > h1 {
     margin: 0;
   }
@@ -32,7 +39,15 @@ $card-padding: 25px;
       &:last-child {
         margin: 0;
       }
+      opacity: 0.3;
+      &:hover {
+        transition: 0.5s;
+        opacity: 0.8;
+      }
     }
+  }
+  &__Active {
+    opacity: 1 !important;
   }
   &__Close {
     cursor: pointer;
@@ -44,4 +59,16 @@ $card-padding: 25px;
       color: $orange-1;
     }
   }
+}
+
+#done {
+  background-color: $green-1;
+}
+
+#inprogress {
+  background-color: $yellow-1;
+}
+
+#todo {
+  background-color: $red-1;
 }
