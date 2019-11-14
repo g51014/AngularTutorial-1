@@ -1,9 +1,10 @@
 <div class='Todo'>
   <ng-container *ngIf='todo$ | async as todos'>
     <div class='Todo__Filter'>
-      <button [ngStyle]="{'background-color': '#ff1744'}"></button>
-      <button [ngStyle]="{'background-color': '#ffe205'}"></button>
-      <button [ngStyle]="{'background-color': '#28a745'}"></button>
+      <ng-container *ngFor='let status of todoStatus'>
+        <button id={{status}} (click)=filter($event.target.id)
+          [ngStyle]="{'background-color': TODO_STATUS[status]}"></button>
+      </ng-container>
     </div>
     <div class='Todo__Card'>
       <ng-container *ngFor='let todo of todos'>
