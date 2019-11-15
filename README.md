@@ -3,8 +3,10 @@
 1. how to use angular router and create nav bar components
 2. how to write service and use rxjs handle event and how to use httpClient get API
 3. complete member page
-4. create todo-card component and complete todo page
-5. 
+4. add todo-card component and create todo cards and todo service
+5. implement update todo and delete todo feature in todo service .
+6. add create-todo-card component and implement add todo feature.
+7. implement filter feature in todo component and complete todo page.
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
