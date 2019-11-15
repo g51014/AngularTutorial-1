@@ -19,8 +19,8 @@ export class TodoCardComponent implements OnInit {
   public TODO_STATUS = Object.keys(TODO_STATUS);
   public updateStatus( status: 'done' | 'todo' | 'inprogress') {
     this.todo.status = status;
-    console.log(this.todo);
-    // this.$todo.updateTodo.next(this.todo);
+    // console.log(this.todo);
+    this.$todo.updateTodo.next(this.todo);
   }
 
   ngOnInit() {

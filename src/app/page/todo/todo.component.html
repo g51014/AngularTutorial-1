@@ -1,9 +1,15 @@
 <div class='Todo'>
   <ng-container *ngIf='todo$ | async as todos'>
     <div class='Todo__Filter'>
-      <ng-container *ngFor='let status of todoStatus'>
-        <button id={{status}} (click)=filter($event.target.id)
-          [ngStyle]="{'background-color': TODO_STATUS[status]}"></button>
+      <ng-container *ngIf='todoFilter$ | async as todoFilter'>
+        <ng-container *ngFor='let status of todoStatus'>
+          <button id={{status}} (click)= filter($event.target.id)
+            [ngStyle]="{
+              'background-color': TODO_STATUS[status],
+              'opacity' : status === todoFilter ? 1 : null,
+              'box-shadow': status === todoFilter ? '0px 1px 10px rgba(0, 0, 0, 0.5)' : null
+            }"></button>
+        </ng-container>
       </ng-container>
     </div>
     <div class='Todo__Card'>
